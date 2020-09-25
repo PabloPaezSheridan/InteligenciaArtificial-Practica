@@ -1,0 +1,33 @@
+Materia(InteligenciaArtificial)
+ActividadesInviduales(resumenUnidad1,cuestionario1Unidad2,cuestionario2Unidad2, practicaProlog1, practica2Prolog,tecnicasBusqueda, tecnicasBusquedaCantaro,practica3Prolog, parcial)
+ActividadesGrupales(TP1Backtracing, TP2Busquedas, cuestionario1Unidad3, cuestionario2Unidad3)
+
+Alumno(JoseM)
+Alumno(JoseV)
+Alumno(Augusto)
+Alumno(Pablo)
+Grupo1503(JoseM, JoseV, Augusto, Pablo)
+
+# Notas de ActividadesInviduales
+resumenUnidad1(JoseM) = 9
+resumenUnidad1(JoseV) = 10
+resumenUnidad1(Augusto) = 8
+resumenUnidad1(Pablo) = 7
+
+cuestionario1Unidad2(JoseM) = 8
+cuestionario1Unidad2(JoseV) = 7
+cuestionario1Unidad2(Augusto) = 6
+cuestionario1Unidad2(Pablo) = 6
+
+...
+# Notas ActividadesGrupales
+TP1Backtracing(Grupo1503) = 7
+TP2Busquedas(Grupo1503) = 9
+
+...
+
+TP1Backtracing()
+ 
+∀ x: ActividadesInviduales(x),Alumno(y),  x(y) > 6 --> AprobadoIndividual(y)
+∀ x: ActividadesGrupales(x), Grupo1503(y), x(y)> 6 --> AprobadoGrupo(y)
+∀ x,y: Grupo1503(x), Alumno(y), AprobadoGrupo(x(y)) ^ AprobadoIndividual(y) --> MateriaAprobada(y)
