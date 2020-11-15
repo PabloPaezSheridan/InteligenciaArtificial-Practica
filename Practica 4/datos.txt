@@ -1,0 +1,12 @@
+:- dynamic habito/2.
+
+habito(perro, alimentacion(balanceado,25)).
+habito(perro, bebida(agua,30)).
+habito(perro, reproduccion(todoelaño, 4)).
+habito(perro, horadesueño(8)).
+
+habito(gato, alimentacion(caza,20)).
+habito(gato, bebida(agua,25)).
+habito(gato, reproduccion(todoelaño, 3)).
+habito(gato, horadesueño(6)).
+
