@@ -1,12 +1,8 @@
-:- dynamic habito/2.
+:- dynamic libro/5.
 
-habito(perro, alimentacion(balanceado,25)).
-habito(perro, bebida(agua,30)).
-habito(perro, reproduccion(todoelaño, 4)).
-habito(perro, horadesueño(8)).
-
-habito(gato, alimentacion(caza,20)).
-habito(gato, bebida(agua,25)).
-habito(gato, reproduccion(todoelaño, 3)).
-habito(gato, horadesueño(6)).
+libro(1, metamorfosis, kafka, soprano, 200).
+libro(2, cartas_a_mi_padre, kafka, praga, 150).
+libro(3, sandokan, salgari, debolsillo, 100).
+libro(4, corsario_negro, salgari, debolsillo, 180).
+libro(5, utopia, moro, punto, 500).
 
